@@ -1,21 +1,12 @@
 from pathlib import Path
 
-from PIL import Image
-
-
-def image_reduce(in_file, out_file, target_scale):
-    image = Image.open(in_file)
-    x, y = image.size
-    new_x, new_y = int(target_scale * x), int(target_scale * y)
-    new_image = image.resize((new_x, new_y))
-    new_image.save(out_file)
-
+from ImageReducer import image_reduce
 
 if __name__ == '__main__':
     import sys
 
     if len(sys.argv) != 2:
-        print('Usage: %s 1024_size_file.png' % sys.argv[0])
+        print('Usage: %s 1024_SIZE_FILE.png' % sys.argv[0])
         exit(0)
 
     pic_1024 = sys.argv[1]
