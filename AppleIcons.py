@@ -1,9 +1,9 @@
-from pathlib import Path
-
 from ImageReducer import image_reduce
 
 if __name__ == '__main__':
     import sys
+
+    from pathlib import Path
 
     if len(sys.argv) != 2:
         print('Usage: %s 1024_SIZE_FILE.png' % sys.argv[0])

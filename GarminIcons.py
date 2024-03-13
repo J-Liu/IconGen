@@ -1,9 +1,9 @@
-from pathlib import Path
-
 from ImageReducer import image_reduce
 
 if __name__ == '__main__':
     import sys
+
+    from pathlib import Path
 
     if len(sys.argv) != 3:
         print('Usage: %s 1024_SIZE_FILE.png GARMIN_ICON_PIXEL_SIZE' % sys.argv[0])
